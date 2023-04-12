@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:background="@color/bg"
+    android:backgroundTint="@color/bg"
+    android:paddingTop="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/round_primary"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/imageField"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/baseline_file_download_off_24"
+            app:tint="@color/black"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Error: title not found"
+                android:textColor="@color/black"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/summaryText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="Error: summary not found"
+                android:textColor="@color/black"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/byText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Error: by line not found"
+                android:textColor="@color/black_light"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Error: publication date not found"
+                android:textColor="@color/black_light"
+                android:textSize="14dp"
+                tools:ignore="TextSizeCheck"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

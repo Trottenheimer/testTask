@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="409dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/logoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_1"
+                android:fontFamily="@font/montserrat_bold"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/navLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_reviewes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@string/reviewesButton"
+                    android:textColor="@color/main_1"
+                    app:cornerRadius="0sp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="2sp" />
+
+                <Button
+                    android:id="@+id/button_critics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:onClick="goToCriticsActivity"
+                    android:textColor="@color/white"
+                    android:text="@string/criticsButton"
+                    app:cornerRadius="0sp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="2sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/searchBar"
+            android:layout_width="250sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerLayout">
+
+            <EditText
+                android:id="@+id/searchField"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_search_24"
+                android:ems="10"
+                android:inputType="text"
+                android:text=""
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateBar"
+            android:layout_width="250sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBar">
+
+            <EditText
+                android:id="@+id/dateField"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/baseline_calendar_month_24"
+                android:ems="10"
+                android:hint="1980.01.01-1990.01.01"
+                android:textColorHint="#88888888"
+                android:textColor="@color/black"
+                android:imeOptions="actionDone"
+                android:inputType="date"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/critLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:isScrollContainer="true"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:overScrollMode="always"
+            android:paddingStart="0sp"
+            android:paddingLeft="0sp"
+            android:paddingTop="20sp"
+            android:paddingEnd="0sp"
+            android:paddingBottom="0sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateBar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
